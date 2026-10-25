@@ -1,0 +1,23 @@
+{
+  "mercado": {
+    "SPY": 759.97,
+    "RSP": 216.54,
+    "VIX": 19.45,
+    "Ratio_SPY_RSP": 3.5096,
+    "Ratio_High_Yield_HYG_IEI": 0.6719,
+    "Ratio_Cobre_Oro_COPX_GLD": 0.1994
+  },
+  "opciones_spy": {
+    "Vencimiento_Evaluado": "2026-10-26",
+    "Put_Call_Ratio_Volumen": 1.1978,
+    "Soporte_Max_Put_OI": 750.0,
+    "Resistencia_Max_Call_OI": 807.0
+  },
+  "macro_fred": {
+    "Tasa_FEDFUNDS": 3.75,
+    "Balance_FED_Millones": 6753604.0,
+    "TGA_Millones": 952002.0,
+    "Repo_Inverso_Millones": 0.2,
+    "Liquidez_Neta_Billones_USD": 5.802
+  }
+}
