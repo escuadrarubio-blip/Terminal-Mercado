@@ -1,28 +1,30 @@
 import yfinance as yf
-import pandas as pd
 import json
 
 def obtener_datos_mercado():
-    print("Descargando tickers principales...")
-    tickers = yf.download(["SPY", "RSP", "^VIX"], period="1mo", interval="1d")
+    print("Iniciando descarga individual de tickers...")
     
-    # Extraer precios de cierre recientes
-    cierre = tickers['Close']
-    ultimo_spy = float(cierre['SPY'].dropna().iloc[-1])
-    ultimo_rsp = float(cierre['RSP'].dropna().iloc[-1])
-    ultimo_vix = float(cierre['^VIX'].dropna().iloc[-1])
+    # Descargar datos recientes de cada activo por separado
+    spy_data = yf.Ticker("SPY").history(period="5d")
+    rsp_data = yf.Ticker("RSP").history(period="5d")
+    vix_data = yf.Ticker("^VIX").history(period="5d")
     
-    # Cálculo del ratio de amplitud de mercado
+    # Extraer el último precio de cierre disponible
+    ultimo_spy = float(spy_data['Close'].dropna().iloc[-1])
+    ultimo_rsp = float(rsp_data['Close'].dropna().iloc[-1])
+    ultimo_vix = float(vix_data['Close'].dropna().iloc[-1])
+    
+    # Calcular el cociente de amplitud
     ratio_spy_rsp = round(ultimo_spy / ultimo_rsp, 4)
     
     resumen = {
-        "spy": round(ultimo_spy, 2),
-        "rsp": round(ultimo_rsp, 2),
-        "vix": round(ultimo_vix, 2),
-        "ratio_amplitud": ratio_spy_rsp
+        "SPY": round(ultimo_spy, 2),
+        "RSP": round(ultimo_rsp, 2),
+        "VIX": round(ultimo_vix, 2),
+        "Ratio_SPY_RSP": ratio_spy_rsp
     }
     
-    print("Datos obtenidos con éxito:")
+    print("\n--- DATOS DE MERCADO EXTRAÍDOS CON ÉXITO ---")
     print(json.dumps(resumen, indent=2))
     return resumen
 
