@@ -62,7 +62,7 @@ Entrega el informe directamente en formato Markdown limpio y profesional.
     print("Enviando solicitud a Gemini...")
     cliente = genai.Client(api_key=api_key)
     respuesta = cliente.models.generate_content(
-        model="gemini-2.5-flash",
+        model="gemini-3.8-flash",
         contents=prompt
     )
 
