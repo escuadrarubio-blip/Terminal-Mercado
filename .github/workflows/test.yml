@@ -3,6 +3,9 @@ name: Prueba Terminal Mercado
 on:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   probar:
     runs-on: ubuntu-latest
@@ -25,3 +28,11 @@ jobs:
         run: |
           python motor_datos.py
           python generar_informe.py
+
+      - name: Guardar resultados en el repositorio
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add datos_hoy.json informe_hoy.md
+          git commit -m "Actualizacion automatica: datos e informe del dia" || echo "Sin cambios para guardar"
+          git push
