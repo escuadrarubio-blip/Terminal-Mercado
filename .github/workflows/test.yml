@@ -20,5 +20,5 @@ jobs:
 
       - name: Ejecutar motor de datos
         env:
-          FRED_API_KEY: ${{ e89e2d59be2750ca2d8619192fca7b7f }}
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python motor_datos.py
