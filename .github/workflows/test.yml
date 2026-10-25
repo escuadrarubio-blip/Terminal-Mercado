@@ -1,13 +1,17 @@
-name: Prueba Terminal Mercado
+name: Terminal Mercado Automatizado
 
 on:
+  schedule:
+    # 13:00 UTC equivale a las 10:00 AM de Chile (en horario UTC-3).
+    # 0 = Domingo (Informe Semanal), 1-5 = Lunes a Viernes (Informe Diario).
+    - cron: '0 13 * * 0-5'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  probar:
+  ejecutar-terminal:
     runs-on: ubuntu-latest
     steps:
       - name: Descargar codigo
