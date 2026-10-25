@@ -1,4 +1,4 @@
-name: Prueba Motor Datos
+name: Prueba Terminal Mercado
 
 on:
   workflow_dispatch:
@@ -18,7 +18,10 @@ jobs:
       - name: Instalar librerias
         run: pip install -r requirements.txt
 
-      - name: Ejecutar motor de datos
+      - name: Ejecutar tubería completa
         env:
           FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
-        run: python motor_datos.py
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          python motor_datos.py
+          python generar_informe.py
