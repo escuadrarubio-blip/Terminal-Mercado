@@ -4,6 +4,7 @@ import glob
 from datetime import datetime
 from pypdf import PdfReader
 from google import genai
+import time
 
 def cargar_datos_cuantitativos():
     if not os.path.exists("datos_hoy.json"):
@@ -97,3 +98,32 @@ Por favor, elabora el reporte respetando estrictamente los 6 puntos de la estruc
 
 if __name__ == "__main__":
     generar_reporte()
+
+print("Enviando matriz y sustrato a Gemini 3.8 Flash...")
+    cliente = genai.Client(api_key=api_key)
+    
+    # Reintento automático ante picos temporales de demanda (Error 503)
+    respuesta = None
+    for intento in range(1, 4):
+        try:
+            respuesta = cliente.models.generate_content(
+                model="gemini-3.8-flash",
+                contents=prompt_usuario,
+                config={
+                    "system_instruction": system_instruction
+                }
+            )
+            break
+        except Exception as e:
+            print(f"Aviso: Intento {intento} falló por saturación ({e}). Reintentando en 15 segundos...")
+            if intento < 3:
+                time.sleep(15)
+            else:
+                raise e
+
+    contenido_informe = respuesta.text
+    with open("informe_hoy.md", "w", encoding="utf-8") as f:
+        f.write(contenido_informe)
+
+    print("\n--- INFORME GENERADO EXITOSAMENTE EN 'informe_hoy.md' ---")
+    return contenido_informe
