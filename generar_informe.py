@@ -37,7 +37,9 @@ def generar_reporte():
 
     datos = cargar_datos_cuantitativos()
     contexto_teorico = extraer_texto_docs()
-    contexto_recortado = contexto_teorico[:40000] if contexto_teorico else "Sin marco documental cargado."
+    
+    # Ajuste de tamaño de contexto para evitar timeout en la conexión
+    contexto_recortado = contexto_teorico[:15000] if contexto_teorico else "Sin marco documental cargado."
 
     # Detección de día: 6 corresponde a domingo en Python
     es_domingo = datetime.now().weekday() == 6
