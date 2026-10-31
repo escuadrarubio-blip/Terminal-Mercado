@@ -98,12 +98,24 @@
     function renderizarMetricas(d) {
       document.getElementById('fecha-actualizacion').textContent = `Última captura: ${d.fecha || 'Hoy'}`;
 
-      const vix = d.indices_mercado?.VIX?.precio?.toFixed(2) || '--';
-      const spyRsp = d.amplitud_mercado?.Ratio_SPY_RSP?.toFixed(4) || '--';
-      const liqNeta = d.macro_fred?.Liquidez_Neta_Billones_USD ? `$${d.macro_fred.Liquidez_Neta_Billones_USD.toFixed(3)}T` : '--';
-      const pcr = d.opciones_spy?.Put_Call_Ratio_Volumen?.toFixed(2) || '--';
-      const hygIei = d.leading_indicators?.Ratio_High_Yield_HYG_IEI?.toFixed(4) || '--';
-      const copxGld = d.leading_indicators?.Ratio_Cobre_Oro_COPX_GLD?.toFixed(4) || '--';
+      // Mapeo directo y robusto con la estructura real de datos_hoy.json
+      const vixVal = d.vix?.precio ?? d.indices_mercado?.VIX?.precio ?? d.VIX?.precio;
+      const vix = vixVal !== undefined ? Number(vixVal).toFixed(2) : '--';
+
+      const spyRspVal = d.amplitud_mercado?.Ratio_SPY_RSP ?? d.Ratio_SPY_RSP;
+      const spyRsp = spyRspVal !== undefined ? Number(spyRspVal).toFixed(4) : '--';
+
+      const liqVal = d.macro_fred?.Liquidez_Neta_Billones_USD;
+      const liqNeta = liqVal !== undefined ? `$${Number(liqVal).toFixed(3)}T` : '--';
+
+      const pcrVal = d.opciones_spy?.Put_Call_Ratio_Volumen;
+      const pcr = pcrVal !== undefined ? Number(pcrVal).toFixed(2) : '--';
+
+      const hygIeiVal = d.leading_indicators?.Ratio_High_Yield_HYG_IEI ?? d.ratios_credito?.HYG_IEI;
+      const hygIei = hygIeiVal !== undefined ? Number(hygIeiVal).toFixed(4) : '--';
+
+      const copxGldVal = d.leading_indicators?.Ratio_Cobre_Oro_COPX_GLD ?? d.ratios_intermercado?.COPX_GLD;
+      const copxGld = copxGldVal !== undefined ? Number(copxGldVal).toFixed(4) : '--';
 
       const contenedor = document.getElementById('contenedor-metricas');
       contenedor.innerHTML = `
@@ -133,8 +145,3 @@
         </div>
       `;
     }
-
-    cargarTerminal();
-  </script>
-</body>
-</html>
