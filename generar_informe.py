@@ -1,10 +1,10 @@
 import os
 import json
 import glob
+import time
 from datetime import datetime
 from pypdf import PdfReader
 from google import genai
-import time
 
 def cargar_datos_cuantitativos():
     if not os.path.exists("datos_hoy.json"):
@@ -39,14 +39,13 @@ def generar_reporte():
     datos = cargar_datos_cuantitativos()
     contexto_teorico = extraer_texto_docs()
     
-    # Ajuste de tamaño de contexto para evitar timeout en la conexión
+    # Límite ajustado a 15.000 caracteres para agilidad y evitar desconexiones
     contexto_recortado = contexto_teorico[:15000] if contexto_teorico else "Sin marco documental cargado."
 
     # Detección de día: 6 corresponde a domingo en Python
     es_domingo = datetime.now().weekday() == 6
     tipo_informe = "Informe Semanal (Perspectiva Estratégica)" if es_domingo else "Informe Matutino de Inteligencia de Mercado (Sesión Diaria)"
 
-    # System Prompt formal según Hoja de Ruta Maestra (Punto 2.2)
     system_instruction = f"""
 Eres el Director de Estrategia Macro y Analista Senior del Terminal de Mercados.
 Tu base metodológica, axiomas analíticos y reglas deductivas provienen estrictamente de los DOS TOMOS adjuntos en tu contexto.
@@ -81,26 +80,6 @@ Por favor, elabora el reporte respetando estrictamente los 6 puntos de la estruc
 
     print("Enviando matriz y sustrato a Gemini 3.8 Flash...")
     cliente = genai.Client(api_key=api_key)
-    respuesta = cliente.models.generate_content(
-        model="gemini-3.8-flash",
-        contents=prompt_usuario,
-        config={
-            "system_instruction": system_instruction
-        }
-    )
-
-    contenido_informe = respuesta.text
-    with open("informe_hoy.md", "w", encoding="utf-8") as f:
-        f.write(contenido_informe)
-
-    print("\n--- INFORME GENERADO EXITOSAMENTE EN 'informe_hoy.md' ---")
-    return contenido_informe
-
-if __name__ == "__main__":
-    generar_reporte()
-
-print("Enviando matriz y sustrato a Gemini 3.8 Flash...")
-    cliente = genai.Client(api_key=api_key)
     
     # Reintento automático ante picos temporales de demanda (Error 503)
     respuesta = None
@@ -115,7 +94,7 @@ print("Enviando matriz y sustrato a Gemini 3.8 Flash...")
             )
             break
         except Exception as e:
-            print(f"Aviso: Intento {intento} falló por saturación ({e}). Reintentando en 15 segundos...")
+            print(f"Aviso: Intento {intento} falló ({e}). Reintentando en 15 segundos...")
             if intento < 3:
                 time.sleep(15)
             else:
@@ -127,3 +106,6 @@ print("Enviando matriz y sustrato a Gemini 3.8 Flash...")
 
     print("\n--- INFORME GENERADO EXITOSAMENTE EN 'informe_hoy.md' ---")
     return contenido_informe
+
+if __name__ == "__main__":
+    generar_reporte()
