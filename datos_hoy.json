@@ -1,23 +1,23 @@
 {
   "mercado": {
-    "SPY": 752.1,
-    "RSP": 219.98,
-    "VIX": 21.15,
-    "Ratio_SPY_RSP": 3.4189,
-    "Ratio_High_Yield_HYG_IEI": 0.6687,
-    "Ratio_Cobre_Oro_COPX_GLD": 0.2014
+    "SPY": 738.01,
+    "RSP": 216.51,
+    "VIX": 24.88,
+    "Ratio_SPY_RSP": 3.4086,
+    "Ratio_High_Yield_HYG_IEI": 0.6699,
+    "Ratio_Cobre_Oro_COPX_GLD": 0.1909
   },
   "opciones_spy": {
-    "Vencimiento_Evaluado": "2026-11-02",
-    "Put_Call_Ratio_Volumen": 1.2398,
-    "Soporte_Max_Put_OI": 745.0,
-    "Resistencia_Max_Call_OI": 758.0
+    "Vencimiento_Evaluado": "2026-11-06",
+    "Put_Call_Ratio_Volumen": 1.0004,
+    "Soporte_Max_Put_OI": 750.0,
+    "Resistencia_Max_Call_OI": 760.0
   },
   "macro_fred": {
     "Tasa_FEDFUNDS": 3.88,
-    "Balance_FED_Millones": 6745635.0,
-    "TGA_Millones": 999727.0,
-    "Repo_Inverso_Millones": 5.087,
-    "Liquidez_Neta_Billones_USD": 5.746
+    "Balance_FED_Millones": 6748145.0,
+    "TGA_Millones": 957175.0,
+    "Repo_Inverso_Millones": 0.15,
+    "Liquidez_Neta_Billones_USD": 5.791
   }
 }
