@@ -1,63 +1,76 @@
-# INFORME MATUTINO DE INTELIGENCIA DE MERCADO (SESIÓN DIARIA)
-**Fecha:** 24 de noviembre de 2026  
-**Autor:** Director de Estrategia Macro & Analista Senior de Microestructura
-
----
-
 ### 1. Titular Operativo y Diagnóstico de 1 Frase
-**Titular:** Fontanería en Tensión Extrema: Drenaje Total de Colateral Pasivo y Régimen de Gamma Defensiva  
-**Diagnóstico:** El agotamiento absoluto del Repo Inverso ($0.301M) traslada íntegramente el drenaje fiscal de la TGA ($916.6B) a las reservas bancarias, induciendo un régimen de volatilidad reactiva (VIX 26.36) donde la concentración artificial del índice disfraza un mercado en repliegue crediticio y macroeconómico.
+
+**Titular:** Agotamiento Absoluto del Colchón de Repo Inverso y Régimen de Gamma Corta: La Concentración en Megacaps Enmascara la Asfixia de la Liquidez Interbancaria.  
+**Diagnóstico:** El mercado opera bajo una trampa de liquidez base donde la extinción del colchón del ON RRP ($0,3M) y una TGA expansiva ($916.613M) drenan las reservas bancarias directas, forzando un VIX de 28,29 que deja al SPY (716,7) vulnerable a espirales de desapalancamiento mecánico si se perfora el muro de protección en 700,0.
 
 ---
 
 ### 2. Estado de la Liquidez y Macro (FED, Balance, Tipos)
-Para entender la acción del precio de hoy, debemos mirar las tuberías del sistema financiero:
-* **Tasa FEDFUNDS:** 3.88%
-* **Balance de la Reserva Federal:** $6,741,452 M ($6.74 Billones / Trillions)
-* **Cuenta General del Tesoro (TGA):** $916,613 M ($916.6B)
-* **Facilidad de Repo Inverso Nocturno (ON RRP):** $0.301 M (~$300,000 USD, nivel residual nulo)
-* **Liquidez Neta Calculada:** **$5.825 Billones USD** ($\text{Balance} - \text{TGA} - \text{ON RRP}$)
 
-**Mecanismo de transmisión institucional:**  
-Tal como dictamina el marco de balances mayoristas, mientras el saldo de la ventanilla ON RRP se mantenía inflado, absorbía las emisiones del Tesoro actuando como un colchón amortiguador sin restar un solo dólar del sistema bancario comercial. Hoy ese amortiguador **se ha extinguido por completo** ($0.301M). 
+El análisis del balance agregado del sistema intermediario revela una señal de alerta estructural de primer orden:
 
-Con una TGA drenando la colosal cifra de **$916,613 M**, cada nueva necesidad de financiamiento del gobierno estadounidense o liquidación de impuestos se ejecuta restando directamente liquidez de las reservas de los bancos comerciales. La liquidez neta del sistema ha descendido a **$5.825 Billones**, racionando la capacidad de balance de los intermediarios primarios (*dealers*). Hay menos combustible en la fontanería interbancaria para financiar inventarios y sostener el apalancamiento colateralizado en el mercado monetario repo.
+*   **Tasa FEDFUNDS:** 3,88%.
+*   **Balance Total de la Reserva Federal:** $6.741.452 millones (~$6,74 billones).
+*   **Cuenta General del Tesoro (TGA):** $916.613 millones.
+*   **Facilidad de Repo Inverso Nocturno (ON RRP):** $0,3 millones.
+*   **Liquidez Neta Efectiva:** **$5,825 billones** ($6.741.452M - $916.613M - $0,3M).
+
+```
+                      ESQUEMA DE TRANSMISIÓN DE LIQUIDEZ BASE
+                      
+  Balance FED ($6,74T) ────┬───> TGA ($916,6B) [DRENAJE FISCAL DIRECTO]
+                           ├───> ON RRP ($0,3M) [EXTINGUIDO / SIN COLCHÓN]
+                           └───> Reservas Bancarias Netas ($5,825T) [EN RIESGO]
+```
+
+**Mecanismo Microestructural:**  
+El dato determinante reside en el saldo residual de **$0,3 millones en el ON RRP**. De acuerdo con la física de balances interbancarios, mientras los fondos del mercado monetario (MMF) mantenían liquidez ociosa en el Repo Inverso, cualquier emisión del Tesoro para rellenar la TGA absorbía ese exceso sin dañar el fondeo bancario. Al converger el ON RRP a cero, **el amortiguador ha desaparecido**.
+
+Actualmente, mantener una TGA elevada por encima de los $916.000 millones drena directamente las reservas de los bancos comerciales. Esto tensiona el coste de balance mayorista, reduce la capacidad de los *dealers* primarios para financiar inventario colateralizado en el mercado monetario y encarece la provisión de contrapartida pasiva en los libros de órdenes.
 
 ---
 
 ### 3. Amplitud y Régimen de Mercado (SPY vs RSP, VIX, Cobre/Oro)
-La lectura cruzada de activos confirma una fractura estructural profunda:
 
-* **Concentración del Mercado (SPY 718.78 vs. RSP 213.96 | Ratio 3.3594):**  
-  El diferencial entre el índice ponderado por capitalización (SPY) y el equiponderado (RSP) se encuentra en niveles de asimetría crítica. El mercado en general está descolgado; un puñado mínimo de megacapitalizaciones sostiene la fachada del SPY, mientras que la subasta agregada (RSP) languidece.
-* **Régimen de Volatilidad (VIX en 26.36):**  
-  Hemos roto holgadamente el umbral de contención pasiva (20.0). Cotizar en 26.36 sitúa a los creadores de mercado en una postura defensiva inmediata. La superficie de volatilidad denota demanda inelástica de protección y ensanchamiento de horquillas (*spreads bid-ask*).
-* **Pulso Macroeconómico Cobre/Oro (COPX/GLD en 0.1769):**  
-  El dinero institucional prefiere el oro (reserva de valor sin riesgo de contrapartida) frente al cobre industrial (reflejo de la actividad fabril). El ciclo global está desacelerando.
-* **Apetito por Riesgo Crediticio (HYG/IEI en 0.6637):**  
-  La compresión del ratio entre crédito corporativo de alto rendimiento y bonos del Tesoro de corta duración refleja aversión al riesgo en los libros de crédito corporativo, confirmando la transmisión del encarecimiento del fondeo hacia los balances de las empresas.
+*   **Ratio SPY/RSP (3,3221):** Divergencia extrema. La cotización ponderada por capitalización (SPY: 716,7) sobrepasa de forma desmedida a la versión equiponderada (RSP: 215,74). El mercado sube o se sostiene exclusivamente sobre un puñado selecto de megacaps. La amplitud interna está completamente deteriorada: no hay tracción en la economía real cotizada, sino una concentración defensiva forzada por flujos pasivos.
+*   **VIX (28,29):** El índice de volatilidad ha roto con holgura el umbral de complacencia (20,0) y se sitúa en zona de tensión sistémica. Un VIX en 28,29 refleja una curva de volatilidad que tiende hacia la inversión (*backwardation*) y una demanda inelástica de coberturas de corto plazo. Los creadores de mercado operan en régimen de **Gamma Corta**, viéndose obligados algorítmicamente a vender futuros del subyacente a medida que el precio cae, retroalimentando la caída.
+*   **Ratio High Yield vs Deuda Segura (HYG/IEI: 0,6629):** Deterioro significativo en los diferenciales de crédito. El dinero inteligente y el mercado corporativo exigen mayor prima por riesgo; el crédito no valida la resistencia de las acciones.
+*   **Ratio Cobre/Oro (COPX/GLD: 0,1791):** Nivel contractivo severo. El metal monetario y de cobertura (oro) supera ampliamente a la demanda industrial cíclica (cobre), confirmando expectativas de desaceleración global y aversión al riesgo macroeconómico.
 
 ---
 
 ### 4. Mapeo de Posicionamiento de Opciones (Zonas de Dolor, Muros de Puts y Calls)
-En la estructura de derivados del SPY (con vencimiento evaluado para la sesión presente 2026-11-24):
 
-* **Precio Actual SPY:** 718.78
-* **Put/Call Ratio por Volumen:** **1.2437**
-* **Resistencia Estructural (Call Wall / Max Call OI):** **740.0**
-* **Soporte Estructural (Put Wall / Max Put OI):** **620.0**
+Evaluación de la estructura de derivados sobre el SPY (Spot: 716,7):
 
-**Dinámica Microestructural:**  
-1. **Flujo Agresivo Defensivo:** Un Put/Call ratio de volumen de 1.2437 demuestra que los operadores institucionales e intradiarios están adquiriendo primas de puts agresivamente. 
-2. **Impacto en los Dealers:** Con el VIX en 26.36 y un flujo comprador de Puts, las mesas de negociación (*dealers*) se encuentran en régimen de **Gamma Corta** o en la antesala de cobertura acelerada. Cada caída en el subyacente obliga a los algoritmos de cobertura delta a vender futuros a mercado para mantener su delta neutral, transformando el libro de órdenes en un mecanismo procíclico.
-3. **Límites de la Subasta:** El nivel 740.0 actúa como un techo inexpugnable para la sesión (los creadores de mercado desarmarán coberturas si el precio se acerca, amortiguando subidas). Hacia abajo, el abismo de volumen se abre con un soporte masivo en 620.0, dejando un vacío de liquidez intermedia donde los deslizamientos (*slippage*) pueden ser severos si se perforan mínimos locales.
+*   **Put/Call Ratio de Volumen:** **1,0758**. Los participantes institucionales compran más volumen de protección (puts) que de especulación alcista (calls), manteniendo una presión compradora sobre la volatilidad implícita intradía.
+*   **Muro de Calls / Resistencia Estructural (Max Call OI):** **730,0**. En esta zona se concentran las coberturas de delta positivo de los intermediarios. Actúa como un techo mecánico de contención: el avance hacia 730,0 desata ventas de coberturas pasivas por parte de las mesas de opciones, desacelerando el impulso alcista.
+*   **Muro de Puts / Soporte Estructural Crítico (Max Put OI):** **700,0**. Nivel de soporte institucional prioritario. Es la principal concentración de contratos put abiertos. 
+
+```
+                               PERFIL DE CONVEXIDAD (SPY)
+                               
+   [730.0]  ====================== MURO DE CALLS (Techo Mecánico / Cobertura Dealer)
+      │
+   [716.7]  <--- SPOT ACTUAL (Zona de Transición en Régimen de Gamma Corta)
+      │
+   [700.0]  ====================== MURO DE PUTS (Fusible Crítico de Liquidación)
+```
+
+**Dinámica de Fricción Intradía:**  
+El SPY cotiza a 716,7, en una zona de "tierra de nadie" a 16,7 puntos del muro de puts. Si el índice sufre un barrido agresivo y se acerca a 700,0, la aceleración de la delta negativa de las puts obligará a los creadores de mercado a descargar masivamente coberturas cortas de subyacente. Por debajo de 700,0 no existe liquidez pasiva acumulada; entraríamos en un nodo de bajo volumen (LVN) con riesgo de liquidaciones en cascada.
 
 ---
 
 ### 5. Conclusión y Escenario Más Probable para la Sesión / Semana
-* **Diagnóstico Táctico:** Régimen de alta vulnerabilidad. El mercado carece de soporte pasivo institucional debido al colapso de las reservas excedentes y a una TGA absorbente.
-* **Escenario Más Probable (Sesión Intradiaria):** Sesgo correctivo y de contención nerviosa. Mientras el SPY cotice por debajo de los 725-730, los rebotes serán vendidos por coberturas automáticas. Cualquier rotura intradiaria a la baja se verá amplificada por liquidaciones mecánicas y coberturas dinámicas derivadas del flujo 0DTE (Put/Call 1.2437).
-* **Guía Operativa:** Prudencia extrema en posiciones largas. Reducción obligatoria del tamaño de posición por incremento del VaR intradía (VIX > 26). La toma de posiciones alcistas carece de respaldo en la liquidez neta estructural.
+
+**Sesgo Operativo:** **Defensivo / Bajista Controlado.**
+
+1.  **Escenario Principal (Probabilidad 65%):**  
+    Testeo de soportes intermedios. La combinación de drenaje de reservas (ON RRP en 0 y TGA > 916B) y VIX en 28,29 impedirá subidas sostenidas. Cualquier rebote técnico hacia la zona 720,0–722,0 encontrará fuerte absorción vendedora institucional y resistencia de los creadores de mercado antes del Muro de Calls en 730,0. El flujo tenderá a presionar el rango hacia los 708,0–705,0 buscando testear el Muro de Puts en 700,0.
+2.  **Escenario Alternativo / Fusible de Ruptura (Probabilidad 35%):**  
+    Si el flujo vendedor forzado por llamadas de margen y ampliación de diferenciales de crédito perfora con volumen el strike de **700,0**, la pérdida de liquidez pasiva desatará una venta forzada sistemática (*sweep-to-fill*) que arrastraría al índice hacia un régimen de deslizamiento acelerado en busca de un nuevo nodo de alto volumen (HVN).
+3.  **Tesis Táctica:** Evitar compras de ruptura alcista. En tanto el VIX se mantenga por encima de 25 y el ON RRP no devuelva reservas al sistema, los rallies carecen de combustible estructural. Monitorear estrictamente el soporte de 700,0 en SPY como nivel clave para la gestión de riesgo.
 
 ---
 
@@ -65,36 +78,35 @@ En la estructura de derivados del SPY (con vencimiento evaluado para la sesión 
 
 ```json
 {
-  "fecha_informe": "2026-11-24",
+  "fecha_informe": "2026-11-25",
   "diagnostico_macro": {
-    "regimen_liquidez": "Tensión de Fondeo",
-    "liquidez_neta_billones": 5.825,
-    "on_rrp_estado": "Agotado",
-    "presion_tga": "Drenaje Severo",
-    "tasa_fedfunds": 3.88
+    "sesgo_general": "Bajista / Defensivo",
+    "regimen_volatilidad": "Alta Volatilidad / Gamma Corta",
+    "estado_liquidez_neta": "Contractivo",
+    "liquidez_neta_billones_usd": 5.825,
+    "on_rrp_estado": "Agotado / Umbral Crítico (0.3M)",
+    "tga_presion": "Drenaje Agresivo (916.613M)"
   },
-  "microestructura_y_volatilidad": {
-    "vix": 26.36,
-    "regimen_vix": "Alta Volatilidad / Estrés",
-    "regimen_gamma_estimado": "Gamma Corta / Transición Defensiva",
-    "put_call_ratio_volumen": 1.2437,
-    "muro_call_resistencia": 740.0,
-    "muro_put_soporte": 620.0
+  "metricas_clave": {
+    "vix": 28.29,
+    "ratio_spy_rsp": 3.3221,
+    "ratio_credito_hyg_iei": 0.6629,
+    "ratio_cobre_oro": 0.1791,
+    "put_call_ratio_volumen": 1.0758
   },
-  "amplitud_mercado": {
-    "spy_spot": 718.78,
-    "rsp_spot": 213.96,
-    "ratio_spy_rsp": 3.3594,
-    "evaluacion_amplitud": "Desconexión Crítica / Concentración en Megacaps",
-    "ratio_hyg_iei": 0.6637,
-    "ratio_copx_gld": 0.1769,
-    "sesgo_ciclo_economico": "Aversión al Riesgo / Contracción"
+  "niveles_operativos_spy": {
+    "spot_actual": 716.7,
+    "muro_puts_soporte": 700.0,
+    "muro_calls_resistencia": 730.0,
+    "rango_esperado_sesion": {
+      "minimo_proyectado": 702.0,
+      "maximo_proyectado": 722.5
+    }
   },
-  "directriz_estrategica": {
-    "sesgo_direccional": "Bajista / Defensivo",
-    "probabilidad_ruptura_alcista": "Baja",
-    "riesgo_impacto_mecanico": "Elevado",
-    "accion_sugerida": "Reducir apalancamiento, favorecer coberturas delta-neutrales o táctica vendedora en resistencias (Call Wall)."
-  }
+  "alertas_riesgo": [
+    "Fusible de liquidez activo por agotamiento de la facilidad ON RRP.",
+    "Riesgo de aceleración mecánica bajista por debajo de 700.0 en SPY.",
+    "Divergencia bajista extrema de amplitud interna (concentración en megacaps vs RSP)."
+  ]
 }
 ```
